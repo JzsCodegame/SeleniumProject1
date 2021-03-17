@@ -83,7 +83,7 @@
 <version>2.19.1</version>  
 <configuration>  
 <suiteXmlFiles>  
-<suiteXmlFile>C:\Users\jzo_0\eclipse-workspace1\MavenProject1\POmFile.xml</suiteXmlFile>  
+<suiteXmlFile>/var/lib/jenkins/workspace/AP_ProjectFolder/POmFile.xml</suiteXmlFile>  
 </suiteXmlFiles>  
 </configuration>  
 </plugin>  
