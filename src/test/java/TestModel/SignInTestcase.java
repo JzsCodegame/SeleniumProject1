@@ -41,7 +41,7 @@ public class SignInTestcase {
     public void setup() {
 
 	   System.setProperty("webdriver.chrome.driver", 
-		        System.getProperty("user.dir") + "//chromedriver.exe");
+		        System.getProperty("user.dir") + "//chromedriver");
         
         driver = new ChromeDriver();
 
