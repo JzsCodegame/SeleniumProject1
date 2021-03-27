@@ -44,8 +44,9 @@ public class SignInTestcase {
     public void setup() {
 
 	  // System.setProperty("webdriver.chrome.driver", "chromedriver");
-	
-WebDriverManager.getInstance(CHROME).setup();
+	DriverManagerType chrome = DriverManagerType.CHROME;
+WebDriverManager.getInstance(chrome).setup();
+//WebDriverManager.getInstance(CHROME).setup();
 	  driver = new ChromeDriver();
 	    //  ChromeOptions ChromeOptions = new ChromeOptions();
 //ChromeOptions.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
