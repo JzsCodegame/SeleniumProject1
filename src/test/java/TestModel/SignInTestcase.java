@@ -10,7 +10,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.testng.Assert;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeTest;
-import static io.github.bonigarcia.wdm.DriverManagerType.CHROME;
+import io.github.bonigarcia.wdm.DriverManagerType.CHROME;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;  
 import PageModel.SignInPage;
@@ -46,11 +46,12 @@ public class SignInTestcase {
 	  // System.setProperty("webdriver.chrome.driver", "chromedriver");
 	
 WebDriverManager.getInstance(CHROME).setup();
-	  //  ChromeOptions ChromeOptions = new ChromeOptions();
+	  driver = new ChromeDriver();
+	    //  ChromeOptions ChromeOptions = new ChromeOptions();
 //ChromeOptions.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
 //driver = new ChromeDriver(ChromeOptions);
         
-     driver = new ChromeDriver();
+    
 
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
