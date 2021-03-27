@@ -12,7 +12,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeTest;
 import static io.github.bonigarcia.wdm.DriverManagerType.CHROME;
 import org.testng.annotations.Test;
-
+import org.testng.annotations.BeforeClass;  
 import PageModel.SignInPage;
 
 import PageModel.SignInformPage;
@@ -34,7 +34,10 @@ public class SignInTestcase {
     //2nd Method
     SignUPForm SignInForm;
     SignINForm Login;
-    
+     @BeforeClass
+    public static void setupClass() {
+        WebDriverManager.chromedriver().setup();
+    }
 
    @BeforeTest
 
