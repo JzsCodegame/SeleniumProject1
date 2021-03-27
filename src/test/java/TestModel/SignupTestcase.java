@@ -30,8 +30,7 @@ public class SignupTestcase {
 
     public void setup() {
 
-	   System.setProperty("webdriver.chrome.driver", 
-		        System.getProperty("user.dir") + "\\chromedriver.exe");
+	   System.setProperty("webdriver.chrome.driver", "/chromedriver.exe");
         
         driver = new ChromeDriver();
 
