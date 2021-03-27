@@ -30,8 +30,10 @@ public class SignupTestcase {
 
     public void setup() {
 
+
+WebDriverManager.getInstance(CHROME).setup();
 	  // System.setProperty("webdriver.chrome.driver", "chromedriver");
-        WebDriverManager.chromedriver().setup();
+      
 	    ChromeOptions ChromeOptions = new ChromeOptions();
 ChromeOptions.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
 driver = new ChromeDriver(ChromeOptions);
