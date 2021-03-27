@@ -6,7 +6,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.testng.Assert;
 
 import org.testng.annotations.BeforeTest;
@@ -41,6 +41,7 @@ public class SignInTestcase {
     public void setup() {
 
 	  // System.setProperty("webdriver.chrome.driver", "chromedriver");
+	    WebDriverManager.chromedriver().setup();
         
         driver = new ChromeDriver();
 
