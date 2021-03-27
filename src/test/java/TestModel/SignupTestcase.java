@@ -36,8 +36,9 @@ public class SignupTestcase {
 
     public void setup() {
 
-
-WebDriverManager.getInstance(CHROME).setup();
+DriverManagerType chrome = DriverManagerType.CHROME;
+WebDriverManager.getInstance(chrome).setup();
+//WebDriverManager.getInstance(CHROME).setup();
 	  // System.setProperty("webdriver.chrome.driver", "chromedriver");
       
 	   // ChromeOptions ChromeOptions = new ChromeOptions();
