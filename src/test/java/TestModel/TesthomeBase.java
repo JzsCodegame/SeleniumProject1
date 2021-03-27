@@ -21,8 +21,7 @@ public class TesthomeBase {
     public void initialize() throws IOException { 
     	WebDriver driver;
   
-        System.setProperty("webdriver.chrome.driver", 
-        System.getProperty("user.dir") + "\\chromedriver.exe"); 
+        System.setProperty("webdriver.chrome.driver", "chromedriver"); 
     
         driver = new ChromeDriver(); 
     
