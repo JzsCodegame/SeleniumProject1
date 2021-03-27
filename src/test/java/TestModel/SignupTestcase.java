@@ -13,7 +13,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import PageModel.SignInformPage;
 import PagefactoryModel.SignINForm;
 import PagefactoryModel.SignUPForm;
-
+import org.testng.annotations.BeforeClass;  
 
 public class SignupTestcase {
 	
@@ -25,7 +25,11 @@ public class SignupTestcase {
     
     SignUPForm SignInForm;
     SignINForm Login;
-    
+   
+	@BeforeClass
+    public static void setupClass() {
+        WebDriverManager.chromedriver().setup();
+    }
 	@BeforeTest
 
     public void setup() {
