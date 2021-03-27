@@ -2,7 +2,7 @@ package TestModel;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
-
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -22,7 +22,7 @@ public class TesthomeBase {
     	WebDriver driver;
   
        // System.setProperty("webdriver.chrome.driver", "chromedriver"); 
-    
+    WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(); 
     
         // To maximize browser 
