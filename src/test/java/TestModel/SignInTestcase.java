@@ -10,7 +10,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.testng.Assert;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeTest;
-
+import static io.github.bonigarcia.wdm.DriverManagerType.CHROME;
 import org.testng.annotations.Test;
 
 import PageModel.SignInPage;
