@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
+import io.github.bonigarcia.wdm.WebDriverManager;
 import PageModel.SignInPage;
 
 import PageModel.SignInformPage;
@@ -31,7 +31,7 @@ public class SignupTestcase {
     public void setup() {
 
 	  // System.setProperty("webdriver.chrome.driver", "chromedriver");
-        
+        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
 
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
