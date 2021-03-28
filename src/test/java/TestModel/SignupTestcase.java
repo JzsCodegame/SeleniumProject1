@@ -41,7 +41,7 @@ public class SignupTestcase {
 	
 	@BeforeTest
 
-    public void setup() {
+    public void setup() throws Exception {
 
 
 
