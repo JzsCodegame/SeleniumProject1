@@ -1,6 +1,8 @@
 package TestModel;
 
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
@@ -41,7 +43,7 @@ public class SignupTestcase {
 	
 	@BeforeTest
 
-    public void setup() throws Exception {
+    public void setup() throws TimeoutException {
 
 
 
