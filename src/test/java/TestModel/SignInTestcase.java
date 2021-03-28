@@ -2,10 +2,10 @@ package TestModel;
 
 
 import java.util.concurrent.TimeUnit;
-//import io.github.bonigarcia.wdm;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-//import io.github.bonigarcia.wdm.managers.ChromeDriverManager;
+import io.github.bonigarcia.wdm.managers.ChromeDriverManager;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.github.bonigarcia.wdm.config.DriverManagerType;
 
@@ -40,32 +40,23 @@ public class SignInTestcase {
     SignINForm Login;
     
 	
-	@BeforeClass
+	/*@BeforeClass
     public static void setupClass() {
-        WebDriverManager.chromedriver().setup();}
-	   /* DriverManagerType chrome = DriverManagerType.CHROME;
-WebDriverManager.getInstance(chrome).setup();
-    }*/
+        WebDriverManager.chromedriver().setup();
+        
+	}*/
+	   
 
    @BeforeTest
 
     public void setup() {
 
 	  System.setProperty("webdriver.chrome.driver", "/usr/lib/chromium-browser/chromedriver");
-	
-         // WebDriverManager.getInstance(CHROME).setup();
+	  ChromeOptions ChromeOptions = new ChromeOptions();
+		ChromeOptions.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
 	  
-	    //  ChromeOptions ChromeOptions = new ChromeOptions();
-//ChromeOptions.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
-//driver = new ChromeDriver(ChromeOptions);
-
-	   // ChromeOptions ChromeOptions = new ChromeOptions();
-	//ChromeOptions.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
-	     //WebDriverManager.chromedriver().setup();
-	   //ChromeOptions ChromeOptions = new ChromeOptions();
-	 //  ChromeOptions.setBinary("/path/to/other/chrome/binary");
-	driver = new ChromeDriver();
-	   //driver = new RemoteWebDriver(DesiredCapabilities.chrome());
+	driver = new ChromeDriver(ChromeOptions);
+	  
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         driver.get("http://automationpractice.com/index.php");
