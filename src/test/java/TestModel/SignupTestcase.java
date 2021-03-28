@@ -12,6 +12,7 @@ import org.testng.annotations.Test;
 //import static io.github.bonigarcia.wdm.DriverManagerType;
 import PageModel.SignInPage;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.CommandExecutor;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -19,6 +20,7 @@ import PageModel.SignInformPage;
 import PagefactoryModel.SignINForm;
 import PagefactoryModel.SignUPForm;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.github.bonigarcia.wdm.config.DriverManagerType;
 
 import org.testng.annotations.BeforeClass;  
 
@@ -36,8 +38,8 @@ public class SignupTestcase {
 	@BeforeClass
     public static void setupClass() {
         WebDriverManager.chromedriver().setup();
-	    //DriverManagerType chrome = DriverManagerType.CHROME;
-//WebDriverManager.getInstance(CHROME).setup();
+	   DriverManagerType chrome = DriverManagerType.CHROME;
+WebDriverManager.getInstance(chrome).setup();
     }
 	@BeforeTest
 
@@ -52,8 +54,9 @@ public class SignupTestcase {
 //driver = new ChromeDriver(ChromeOptions);
         //ChromeOptions ChromeOptions = new ChromeOptions();
 //ChromeOptions.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
-	 //driver = new ChromeDriver(ChromeOptions);
-	 driver = new RemoteWebDriver(DesiredCapabilities.chrome());
+	 driver = new ChromeDriver();
+	
+	 //driver = new RemoteWebDriver(DesiredCapabilities.chrome());
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         driver.get("http://automationpractice.com/index.php");
