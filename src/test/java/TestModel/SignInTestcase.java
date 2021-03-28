@@ -34,7 +34,9 @@ public class SignInTestcase {
     //2nd Method
     SignUPForm SignInForm;
     SignINForm Login;
-     /*@BeforeClass
+    
+	
+	/*@BeforeClass
     public static void setupClass() {
         WebDriverManager.chromedriver().setup();
 	    //DriverManagerType chrome = DriverManagerType.CHROME;
@@ -47,13 +49,15 @@ WebDriverManager.getInstance(CHROME).setup();
 
 	  // System.setProperty("webdriver.chrome.driver", "chromedriver");
 	
-          WebDriverManager.getInstance(CHROME).setup();
-	  driver = new ChromeDriver();
+         // WebDriverManager.getInstance(CHROME).setup();
+	  
 	    //  ChromeOptions ChromeOptions = new ChromeOptions();
 //ChromeOptions.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
 //driver = new ChromeDriver(ChromeOptions);
-        
-    
+
+	    
+	     WebDriverManager.chromedriver().setup();
+	    driver = new ChromeDriver();
 
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
