@@ -10,7 +10,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.testng.Assert;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeTest;
-import static io.github.bonigarcia.wdm.config.DriverManagerType;
+import static io.github.bonigarcia.wdm.config.DriverManagerType.CHROME;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;  
 import PageModel.SignInPage;
@@ -34,20 +34,20 @@ public class SignInTestcase {
     //2nd Method
     SignUPForm SignInForm;
     SignINForm Login;
-     @BeforeClass
+     /*@BeforeClass
     public static void setupClass() {
         WebDriverManager.chromedriver().setup();
 	    //DriverManagerType chrome = DriverManagerType.CHROME;
 WebDriverManager.getInstance(CHROME).setup();
     }
-
+*/
    @BeforeTest
 
     public void setup() {
 
 	  // System.setProperty("webdriver.chrome.driver", "chromedriver");
 	
-//WebDriverManager.getInstance(CHROME).setup();
+          WebDriverManager.getInstance(CHROME).setup();
 	  driver = new ChromeDriver();
 	    //  ChromeOptions ChromeOptions = new ChromeOptions();
 //ChromeOptions.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
