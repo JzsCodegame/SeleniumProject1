@@ -9,6 +9,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.testng.Assert;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.BeforeTest;
 //import static io.github.bonigarcia.wdm.config.DriverManagerType.CHROME;
 import org.testng.annotations.Test;
@@ -59,7 +61,7 @@ public class SignInTestcase {
 	//ChromeOptions.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
 	     //WebDriverManager.chromedriver().setup();
 	//driver = new ChromeDriver(ChromeOptions);
-	   driver = new ChromeDriver();
+	   driver = new RemoteWebDriver(DesiredCapabilities.chrome());
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         driver.get("http://automationpractice.com/index.php");
