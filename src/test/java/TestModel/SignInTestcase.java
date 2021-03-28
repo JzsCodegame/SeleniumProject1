@@ -3,6 +3,7 @@ package TestModel;
 
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import io.github.bonigarcia.wdm.managers.ChromeDriverManager;
@@ -49,7 +50,7 @@ public class SignInTestcase {
 
    @BeforeTest
 
-    public void setup() {
+    public void setup() throws TimeoutException {
 
 	  System.setProperty("webdriver.chrome.driver", "/usr/lib/chromium-browser/chromedriver");
 	  ChromeOptions ChromeOptions = new ChromeOptions();
