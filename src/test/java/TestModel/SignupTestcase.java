@@ -52,9 +52,11 @@ WebDriverManager.getInstance(chrome).setup();
 	   // ChromeOptions ChromeOptions = new ChromeOptions();
 //ChromeOptions.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
 //driver = new ChromeDriver(ChromeOptions);
-        //ChromeOptions ChromeOptions = new ChromeOptions();
+        ChromeOptions ChromeOptions = new ChromeOptions();
 //ChromeOptions.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
-	 driver = new ChromeDriver();
+        
+        ChromeOptions.setBinary("/path/to/other/chrome/binary");
+	 driver = new ChromeDriver(ChromeOptions);
 	
 	 //driver = new RemoteWebDriver(DesiredCapabilities.chrome());
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
