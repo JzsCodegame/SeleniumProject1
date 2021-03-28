@@ -37,7 +37,7 @@ public class SignInTestcase {
      @BeforeClass
     public static void setupClass() {
         WebDriverManager.chromedriver().setup();
-	    DriverManagerType chrome = DriverManagerType.CHROME;
+	    //DriverManagerType chrome = DriverManagerType.CHROME;
 WebDriverManager.getInstance(CHROME).setup();
     }
 
