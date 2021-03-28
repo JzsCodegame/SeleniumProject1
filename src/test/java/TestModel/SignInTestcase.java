@@ -56,8 +56,8 @@ WebDriverManager.getInstance(CHROME).setup();
 //driver = new ChromeDriver(ChromeOptions);
 
 	    
-	     WebDriverManager.chromedriver().setup();
-	    driver = new ChromeDriver();
+	     //WebDriverManager.chromedriver().setup();
+	driver = new ChromeDriver();
 
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
