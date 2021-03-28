@@ -35,28 +35,28 @@ public class SignupTestcase {
     SignUPForm SignInForm;
     SignINForm Login;
    
-	@BeforeClass
+	/*@BeforeClass
     public static void setupClass() {
         WebDriverManager.chromedriver().setup();
 	   DriverManagerType chrome = DriverManagerType.CHROME;
 WebDriverManager.getInstance(chrome).setup();
-    }
+    }*/
 	@BeforeTest
 
     public void setup() {
 
 
 //WebDriverManager.getInstance(CHROME).setup();
-	  // System.setProperty("webdriver.chrome.driver", "chromedriver");
+	  System.setProperty("webdriver.chrome.driver", "/usr/lib/chromium-browser/chromedriver");
       
 	   // ChromeOptions ChromeOptions = new ChromeOptions();
 //ChromeOptions.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
 //driver = new ChromeDriver(ChromeOptions);
-        ChromeOptions ChromeOptions = new ChromeOptions();
+       // ChromeOptions ChromeOptions = new ChromeOptions();
 //ChromeOptions.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
         
-        ChromeOptions.setBinary("/path/to/other/chrome/binary");
-	 driver = new ChromeDriver(ChromeOptions);
+        //ChromeOptions.setBinary("/path/to/other/chrome/binary");
+	 driver = new ChromeDriver();
 	
 	 //driver = new RemoteWebDriver(DesiredCapabilities.chrome());
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
