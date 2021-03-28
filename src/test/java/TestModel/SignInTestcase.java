@@ -2,7 +2,7 @@ package TestModel;
 
 
 import java.util.concurrent.TimeUnit;
-
+import io.github.bonigarcia.wdm
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import io.github.bonigarcia.wdm.managers.ChromeDriverManager;
