@@ -19,7 +19,7 @@ import org.testng.annotations.BeforeClass;
 
 public class SignupTestcase {
 	
-	WebDriver driver;
+	private WebDriver driver;
 
 	SignInPage objLogin;
 
@@ -28,12 +28,12 @@ public class SignupTestcase {
     SignUPForm SignInForm;
     SignINForm Login;
    
-	/*@BeforeClass
+	@BeforeClass
     public static void setupClass() {
         WebDriverManager.chromedriver().setup();
 	    //DriverManagerType chrome = DriverManagerType.CHROME;
-WebDriverManager.getInstance(CHROME).setup();
-    }*/
+//WebDriverManager.getInstance(CHROME).setup();
+    }
 	@BeforeTest
 
     public void setup() {
