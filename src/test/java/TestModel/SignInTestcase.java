@@ -6,7 +6,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 //import io.github.bonigarcia.wdm.managers.ChromeDriverManager;
-//import io.github.bonigarcia.wdm.WebDriverManager;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.testng.Assert;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeTest;
@@ -24,7 +24,7 @@ public class SignInTestcase {
 
     //String driverPath = "C:\\geckodriver.exe";
     
-    WebDriver driver;
+    private WebDriver driver;
 
     SignInPage objLogin;
 
@@ -36,13 +36,13 @@ public class SignInTestcase {
     SignINForm Login;
     
 	
-	/*@BeforeClass
+	@BeforeClass
     public static void setupClass() {
         WebDriverManager.chromedriver().setup();
 	    //DriverManagerType chrome = DriverManagerType.CHROME;
-WebDriverManager.getInstance(CHROME).setup();
+//WebDriverManager.getInstance(CHROME).setup();
     }
-*/
+
    @BeforeTest
 
     public void setup() {
