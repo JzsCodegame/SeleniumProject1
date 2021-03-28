@@ -23,8 +23,7 @@ import PagefactoryModel.SignUPForm;
 public class SignInTestcase {
 
     //String driverPath = "C:\\geckodriver.exe";
-    ChromeOptions ChromeOptions = new ChromeOptions();
-	ChromeOptions.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
+    
     WebDriver driver;
 
     SignInPage objLogin;
@@ -56,7 +55,8 @@ WebDriverManager.getInstance(CHROME).setup();
 //ChromeOptions.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
 //driver = new ChromeDriver(ChromeOptions);
 
-	    
+	    ChromeOptions ChromeOptions = new ChromeOptions();
+	ChromeOptions.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
 	     //WebDriverManager.chromedriver().setup();
 	driver = new ChromeDriver(ChromeOptions);
 
