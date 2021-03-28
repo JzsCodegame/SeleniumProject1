@@ -7,11 +7,11 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import io.github.bonigarcia.wdm.managers.ChromeDriverManager;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import static io.github.bonigarcia.wdm.DriverManagerType;
+//import io.github.bonigarcia.wdm.managers.ChromeDriverManager;
+//import io.github.bonigarcia.wdm.WebDriverManager;
+//import static io.github.bonigarcia.wdm.DriverManagerType;
 import PageModel.SignInPage;
-import org.openqa.selenium.chrome.ChromeOptions;
+//import org.openqa.selenium.chrome.ChromeOptions;
 import PageModel.SignInformPage;
 import PagefactoryModel.SignINForm;
 import PagefactoryModel.SignUPForm;
@@ -46,7 +46,7 @@ WebDriverManager.getInstance(CHROME).setup();
 //ChromeOptions.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
 //driver = new ChromeDriver(ChromeOptions);
        
-	    driver = new ChromeDriver();
+	 driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         driver.get("http://automationpractice.com/index.php");
