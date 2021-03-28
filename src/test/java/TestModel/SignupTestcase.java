@@ -28,12 +28,12 @@ public class SignupTestcase {
     SignUPForm SignInForm;
     SignINForm Login;
    
-	@BeforeClass
+	/*@BeforeClass
     public static void setupClass() {
         WebDriverManager.chromedriver().setup();
 	    //DriverManagerType chrome = DriverManagerType.CHROME;
 WebDriverManager.getInstance(CHROME).setup();
-    }
+    }*/
 	@BeforeTest
 
     public void setup() {
@@ -45,7 +45,8 @@ WebDriverManager.getInstance(CHROME).setup();
 	   // ChromeOptions ChromeOptions = new ChromeOptions();
 //ChromeOptions.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
 //driver = new ChromeDriver(ChromeOptions);
-        driver = new ChromeDriver();
+       
+	    driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         driver.get("http://automationpractice.com/index.php");
