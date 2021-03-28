@@ -31,13 +31,14 @@ public class SignupTestcase {
 	@BeforeClass
     public static void setupClass() {
         WebDriverManager.chromedriver().setup();
+	    DriverManagerType chrome = DriverManagerType.CHROME;
+WebDriverManager.getInstance(CHROME).setup();
     }
 	@BeforeTest
 
     public void setup() {
 
-DriverManagerType chrome = DriverManagerType.CHROME;
-WebDriverManager.getInstance(CHROME).setup();
+
 //WebDriverManager.getInstance(CHROME).setup();
 	  // System.setProperty("webdriver.chrome.driver", "chromedriver");
       
