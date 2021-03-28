@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 //import io.github.bonigarcia.wdm.WebDriverManager;
 //import static io.github.bonigarcia.wdm.DriverManagerType;
 import PageModel.SignInPage;
-//import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.chrome.ChromeOptions;
 import PageModel.SignInformPage;
 import PagefactoryModel.SignINForm;
 import PagefactoryModel.SignUPForm;
