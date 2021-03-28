@@ -47,9 +47,10 @@ public class SignupTestcase {
 	   // ChromeOptions ChromeOptions = new ChromeOptions();
 //ChromeOptions.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
 //driver = new ChromeDriver(ChromeOptions);
-        ChromeOptions ChromeOptions = new ChromeOptions();
-ChromeOptions.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
-	 driver = new ChromeDriver(ChromeOptions);
+        //ChromeOptions ChromeOptions = new ChromeOptions();
+//ChromeOptions.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
+	 //driver = new ChromeDriver(ChromeOptions);
+	 driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         driver.get("http://automationpractice.com/index.php");
