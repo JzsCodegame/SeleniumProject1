@@ -64,7 +64,7 @@ WebDriverManager.getInstance(chrome).setup();
 	     //WebDriverManager.chromedriver().setup();
 	   ChromeOptions ChromeOptions = new ChromeOptions();
 	   ChromeOptions.setBinary("/path/to/other/chrome/binary");
-	driver = new ChromeDriver();
+	driver = new ChromeDriver(ChromeOptions);
 	   //driver = new RemoteWebDriver(DesiredCapabilities.chrome());
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
