@@ -45,7 +45,7 @@ public class SignInTestcase {
 
 	  // System.setProperty("webdriver.chrome.driver", "chromedriver");
 	DriverManagerType chrome = DriverManagerType.CHROME;
-WebDriverManager.getInstance(chrome).setup();
+WebDriverManager.getInstance(CHROME).setup();
 //WebDriverManager.getInstance(CHROME).setup();
 	  driver = new ChromeDriver();
 	    //  ChromeOptions ChromeOptions = new ChromeOptions();
