@@ -2,15 +2,15 @@ package TestModel;
 
 
 import java.util.concurrent.TimeUnit;
-import io.github.bonigarcia.wdm;
+//import io.github.bonigarcia.wdm;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import io.github.bonigarcia.wdm.managers.ChromeDriverManager;
-import io.github.bonigarcia.wdm.WebDriverManager;
+//import io.github.bonigarcia.wdm.managers.ChromeDriverManager;
+//import io.github.bonigarcia.wdm.WebDriverManager;
 import org.testng.Assert;
-import org.openqa.selenium.chrome.ChromeOptions;
+//import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeTest;
-import static io.github.bonigarcia.wdm.config.DriverManagerType.CHROME;
+//import static io.github.bonigarcia.wdm.config.DriverManagerType.CHROME;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;  
 import PageModel.SignInPage;
