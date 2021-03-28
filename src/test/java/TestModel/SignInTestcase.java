@@ -28,7 +28,7 @@ public class SignInTestcase {
 
     //String driverPath = "C:\\geckodriver.exe";
     
-    private WebDriver driver;
+     WebDriver driver;
 
     SignInPage objLogin;
 
@@ -40,10 +40,10 @@ public class SignInTestcase {
     SignINForm Login;
     
 	
-	/*@BeforeClass
+	@BeforeClass
     public static void setupClass() {
-        WebDriverManager.chromedriver().setup();
-	    DriverManagerType chrome = DriverManagerType.CHROME;
+        WebDriverManager.chromedriver().setup();}
+	   /* DriverManagerType chrome = DriverManagerType.CHROME;
 WebDriverManager.getInstance(chrome).setup();
     }*/
 

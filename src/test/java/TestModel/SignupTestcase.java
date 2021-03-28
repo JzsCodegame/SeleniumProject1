@@ -35,12 +35,12 @@ public class SignupTestcase {
     SignUPForm SignInForm;
     SignINForm Login;
    
-	/*@BeforeClass
+	@BeforeClass
     public static void setupClass() {
-        WebDriverManager.chromedriver().setup();
-	   DriverManagerType chrome = DriverManagerType.CHROME;
-WebDriverManager.getInstance(chrome).setup();
-    }*/
+        WebDriverManager.chromedriver().setup();}
+	   /*DriverManagerType chrome = DriverManagerType.CHROME;
+WebDriverManager.getInstance(chrome).setup();*/
+    
 	@BeforeTest
 
     public void setup() {
@@ -59,7 +59,7 @@ WebDriverManager.getInstance(chrome).setup();
 	 driver = new ChromeDriver();
 	
 	 //driver = new RemoteWebDriver(DesiredCapabilities.chrome());
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 
         driver.get("http://automationpractice.com/index.php");
 
