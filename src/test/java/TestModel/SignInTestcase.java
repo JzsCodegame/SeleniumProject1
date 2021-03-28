@@ -37,6 +37,8 @@ public class SignInTestcase {
      @BeforeClass
     public static void setupClass() {
         WebDriverManager.chromedriver().setup();
+	    DriverManagerType chrome = DriverManagerType.CHROME;
+WebDriverManager.getInstance(CHROME).setup();
     }
 
    @BeforeTest
@@ -44,8 +46,7 @@ public class SignInTestcase {
     public void setup() {
 
 	  // System.setProperty("webdriver.chrome.driver", "chromedriver");
-	DriverManagerType chrome = DriverManagerType.CHROME;
-WebDriverManager.getInstance(CHROME).setup();
+	
 //WebDriverManager.getInstance(CHROME).setup();
 	  driver = new ChromeDriver();
 	    //  ChromeOptions ChromeOptions = new ChromeOptions();
