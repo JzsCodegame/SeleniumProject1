@@ -15,6 +15,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import PageModel.SignInformPage;
 import PagefactoryModel.SignINForm;
 import PagefactoryModel.SignUPForm;
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 import org.testng.annotations.BeforeClass;  
 
 public class SignupTestcase {
