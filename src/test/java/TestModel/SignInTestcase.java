@@ -1,6 +1,8 @@
 package TestModel;
 
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
@@ -50,14 +52,14 @@ public class SignInTestcase {
 
    @BeforeTest
 
-    public void setup() throws TimeoutException {
+    public void setup() throws TimeoutException, MalformedURLException {
 
 	  System.setProperty("webdriver.chrome.driver", "/usr/lib/chromium-browser/chromedriver");
 	  ChromeOptions ChromeOptions = new ChromeOptions();
 		ChromeOptions.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
 	  
-	driver = new ChromeDriver(ChromeOptions);
-	  
+	//driver = new ChromeDriver(ChromeOptions);
+		driver = new RemoteWebDriver(new URL("http://192.168.1.114:4444/wd/hub"), ChromeOptions);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         driver.get("http://automationpractice.com/index.php");
