@@ -55,10 +55,10 @@ public class SignInTestcase {
     public void setup()  {
 
 	 // System.setProperty("webdriver.chrome.driver", "/usr/lib/chromium-browser/chromedriver");
-	  ChromeOptions ChromeOptions = new ChromeOptions();
-	  ChromeOptions.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
+	  //ChromeOptions ChromeOptions = new ChromeOptions();
+	  //ChromeOptions.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
     	  WebDriverManager.chromedriver().setup();
-	driver = new ChromeDriver(ChromeOptions);
+	driver = new ChromeDriver();
 		//driver = new RemoteWebDriver(new URL("http://192.168.1.114:4444/wd/hub"), ChromeOptions);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
