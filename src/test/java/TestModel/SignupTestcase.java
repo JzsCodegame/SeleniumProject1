@@ -26,6 +26,7 @@ import PagefactoryModel.SignUPForm;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.github.bonigarcia.wdm.config.DriverManagerType;
 
+
 import org.testng.annotations.BeforeClass;  
 
 public class SignupTestcase {
@@ -43,10 +44,14 @@ public class SignupTestcase {
     @BeforeTest
 
     public void setup() {
-
+    	
+    	/*chrome_options = Options()
+    	chrome_options.add_argument('--headless')
+    	chrome_options.add_argument('--no-sandbox')
+    	chrome_options.add_argument('--disable-dev-shm-usage')*/
 	 // System.setProperty("webdriver.chrome.driver", "/usr/lib/chromium-browser/chromedriver");
-	  //ChromeOptions ChromeOptions = new ChromeOptions();
-		//ChromeOptions.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
+	ChromeOptions ChromeOptions = new ChromeOptions();
+	ChromeOptions.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
     	 WebDriverManager.chromedriver().setup();
 	     driver = new ChromeDriver();
 		//driver = new RemoteWebDriver(new URL("http://192.168.1.114:4444/wd/hub"), ChromeOptions);
