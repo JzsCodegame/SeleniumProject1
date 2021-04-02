@@ -67,6 +67,7 @@ public class SignupTestcase {
     	options.addArguments("start-maximized"); 
     	options.addArguments("enable-automation"); 
     	options.addArguments("--no-sandbox"); 
+    	options.addArguments("--remote-debugging-port=9222");
     	options.addArguments("--disable-infobars");
     	options.addArguments("--disable-dev-shm-usage");
     	options.addArguments("--disable-browser-side-navigation"); 
