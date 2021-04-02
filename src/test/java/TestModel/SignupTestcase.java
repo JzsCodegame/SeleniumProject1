@@ -59,11 +59,19 @@ public class SignupTestcase {
     	opt.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
     	opt.setExperimentalOption("useAutomationExtension", false);*/
     	//driver = new RemoteWebDriver(new URL("http://192.168.1.114:4444/wd/hub"), ChromeOptions);
-    	ChromeOptions ChromeOptions = new ChromeOptions();
-    	ChromeOptions.setBinary("/usr/bin/google-chrome");
+    	
+    	
     	
     	WebDriverManager.chromedriver().setup();
-	     driver = new ChromeDriver(ChromeOptions);
+    	ChromeOptions options = new ChromeOptions();
+    	options.addArguments("start-maximized"); 
+    	options.addArguments("enable-automation"); 
+    	options.addArguments("--no-sandbox"); 
+    	options.addArguments("--disable-infobars");
+    	options.addArguments("--disable-dev-shm-usage");
+    	options.addArguments("--disable-browser-side-navigation"); 
+    	options.addArguments("--disable-gpu"); 
+	     driver = new ChromeDriver(options);
 		
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 

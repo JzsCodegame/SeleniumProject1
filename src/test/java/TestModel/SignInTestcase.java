@@ -69,11 +69,19 @@ public class SignInTestcase {
     	capabilities.setCapability("chrome.binary", "/usr/bin/google-chrome");
     	capabilities.setCapability(ChromeOptions.CAPABILITY, options);*/
     	//driver = new RemoteWebDriver(new URL("http://192.168.1.114:4444/wd/hub"), ChromeOptions);
-    	ChromeOptions options = new ChromeOptions();
-    	options.setBinary("/usr/bin/google-chrome");
+    	
     	
     	WebDriverManager.chromedriver().setup();
-	driver = new ChromeDriver(options);
+    	ChromeOptions options = new ChromeOptions();
+    	options.addArguments("start-maximized"); 
+    	options.addArguments("enable-automation"); 
+    	options.addArguments("--no-sandbox"); 
+    	options.addArguments("--disable-infobars");
+    	options.addArguments("--disable-dev-shm-usage");
+    	options.addArguments("--disable-browser-side-navigation"); 
+    	options.addArguments("--disable-gpu"); 
+	     driver = new ChromeDriver(options);
+	     
 		
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
