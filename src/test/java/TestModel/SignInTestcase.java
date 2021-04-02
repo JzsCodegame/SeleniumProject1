@@ -63,9 +63,9 @@ public class SignInTestcase {
     	opt.addArguments("start-maximized");
     	opt.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
     	opt.setExperimentalOption("useAutomationExtension", false);
-    	WebDriver driver = new ChromeDriver(opt); 
+    	
     	WebDriverManager.chromedriver().setup();
-	driver = new ChromeDriver();
+	driver = new ChromeDriver(opt);
 		//driver = new RemoteWebDriver(new URL("http://192.168.1.114:4444/wd/hub"), ChromeOptions);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 

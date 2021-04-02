@@ -2,6 +2,7 @@ package TestModel;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Collections;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
@@ -52,8 +53,13 @@ public class SignupTestcase {
 	 // System.setProperty("webdriver.chrome.driver", "/usr/lib/chromium-browser/chromedriver");
 	//ChromeOptions ChromeOptions = new ChromeOptions();
 	//ChromeOptions.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
-    	 WebDriverManager.chromedriver().setup();
-	     driver = new ChromeDriver();
+    	ChromeOptions opt = new ChromeOptions();
+    	opt.setBinary("/usr/bin/google-chrome");  //chrome binary location specified here
+    	opt.addArguments("start-maximized");
+    	opt.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
+    	opt.setExperimentalOption("useAutomationExtension", false);
+    	WebDriverManager.chromedriver().setup();
+	     driver = new ChromeDriver(opt);
 		//driver = new RemoteWebDriver(new URL("http://192.168.1.114:4444/wd/hub"), ChromeOptions);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
