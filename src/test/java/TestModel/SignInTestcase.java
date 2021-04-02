@@ -70,8 +70,6 @@ public class SignInTestcase {
     	capabilities.setCapability(ChromeOptions.CAPABILITY, options);*/
     	//driver = new RemoteWebDriver(new URL("http://192.168.1.114:4444/wd/hub"), ChromeOptions);
     	
-    	
-    	WebDriverManager.chromedriver().setup();
     	ChromeOptions options = new ChromeOptions();
     	options.setBinary("/snap/bin/chromium");
     	options.addArguments("start-maximized"); 
@@ -82,6 +80,8 @@ public class SignInTestcase {
     	options.addArguments("--disable-dev-shm-usage");
     	options.addArguments("--disable-browser-side-navigation"); 
     	options.addArguments("--disable-gpu"); 
+    	WebDriverManager.chromedriver().setup();
+    	
 	     driver = new ChromeDriver(options);
 	     
 		
