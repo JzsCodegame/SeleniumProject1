@@ -61,7 +61,7 @@ public class SignupTestcase {
     	//driver = new RemoteWebDriver(new URL("http://192.168.1.114:4444/wd/hub"), ChromeOptions);
     	ChromeOptions ChromeOptions = new ChromeOptions();
     	ChromeOptions.setBinary("/usr/bin/google-chrome");
-    	ChromeOptions.setExperimentalOption("useAutomationExtension", false);
+    	
     	WebDriverManager.chromedriver().setup();
 	     driver = new ChromeDriver(ChromeOptions);
 		
