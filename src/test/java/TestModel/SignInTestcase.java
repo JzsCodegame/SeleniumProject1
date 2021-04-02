@@ -58,15 +58,23 @@ public class SignInTestcase {
 	 // System.setProperty("webdriver.chrome.driver", "/usr/lib/chromium-browser/chromedriver");
 	  //ChromeOptions ChromeOptions = new ChromeOptions();
 	  //ChromeOptions.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
-    	ChromeOptions opt = new ChromeOptions();
+    	/*ChromeOptions opt = new ChromeOptions();
     	opt.setBinary("/usr/bin/google-chrome");  //chrome binary location specified here
     	opt.addArguments("start-maximized");
     	opt.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
-    	opt.setExperimentalOption("useAutomationExtension", false);
-    	
+    	opt.setExperimentalOption("useAutomationExtension", false);*/
+    	/*DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+    	ChromeOptions options = new ChromeOptions();
+    	options.addArguments("test-type");
+    	capabilities.setCapability("chrome.binary", "/usr/bin/google-chrome");
+    	capabilities.setCapability(ChromeOptions.CAPABILITY, options);*/
+    	//driver = new RemoteWebDriver(new URL("http://192.168.1.114:4444/wd/hub"), ChromeOptions);
+    	ChromeOptions options = new ChromeOptions();
+    	options.setBinary("/usr/bin/google-chrome");
+    	options.setExperimentalOption("useAutomationExtension", false);
     	WebDriverManager.chromedriver().setup();
-	driver = new ChromeDriver(opt);
-		//driver = new RemoteWebDriver(new URL("http://192.168.1.114:4444/wd/hub"), ChromeOptions);
+	driver = new ChromeDriver(options);
+		
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         driver.get("http://automationpractice.com/index.php");

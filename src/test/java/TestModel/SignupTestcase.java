@@ -53,14 +53,18 @@ public class SignupTestcase {
 	 // System.setProperty("webdriver.chrome.driver", "/usr/lib/chromium-browser/chromedriver");
 	//ChromeOptions ChromeOptions = new ChromeOptions();
 	//ChromeOptions.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
-    	ChromeOptions opt = new ChromeOptions();
+    	/*ChromeOptions opt = new ChromeOptions();
     	opt.setBinary("/usr/bin/google-chrome");  //chrome binary location specified here
     	opt.addArguments("start-maximized");
     	opt.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
-    	opt.setExperimentalOption("useAutomationExtension", false);
+    	opt.setExperimentalOption("useAutomationExtension", false);*/
+    	//driver = new RemoteWebDriver(new URL("http://192.168.1.114:4444/wd/hub"), ChromeOptions);
+    	ChromeOptions ChromeOptions = new ChromeOptions();
+    	ChromeOptions.setBinary("/usr/bin/google-chrome");
+    	ChromeOptions.setExperimentalOption("useAutomationExtension", false);
     	WebDriverManager.chromedriver().setup();
-	     driver = new ChromeDriver(opt);
-		//driver = new RemoteWebDriver(new URL("http://192.168.1.114:4444/wd/hub"), ChromeOptions);
+	     driver = new ChromeDriver(ChromeOptions);
+		
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         driver.get("http://automationpractice.com/index.php");
