@@ -73,7 +73,7 @@ public class SignInTestcase {
     	
     	WebDriverManager.chromedriver().setup();
     	ChromeOptions options = new ChromeOptions();
-    	options.setBinary("/snap/bin/chromium.chromedriver");
+    	options.setBinary("/snap/bin/chromium");
     	options.addArguments("start-maximized"); 
     	options.addArguments("enable-automation"); 
     	options.addArguments("--no-sandbox"); 
