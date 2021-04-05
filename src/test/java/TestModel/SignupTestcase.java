@@ -61,18 +61,22 @@ public class SignupTestcase {
     	//driver = new RemoteWebDriver(new URL("http://192.168.1.114:4444/wd/hub"), ChromeOptions);
     	
     	ChromeOptions options = new ChromeOptions();
-    	options.setBinary("/usr/bin/google-chrome-stable");
-    	options.addArguments("--headless");
+    	options.setBinary("/usr/bin/google-chrome");
+    	options.addArguments("--headless", "window-size=1024,768");
     	options.addArguments("--no-sandbox");
+    	options.addArguments("--disable-setuid-sandbox");
+    	options.addArguments("--remote-debugging-port=9222");
     	options.addArguments("--disable-dev-shm-usage");
+    	options.addArguments("--disable-extensions");
+    	options.addArguments("--disable-gpu");
+    	options.addArguments("disable-infobars");
     	options.addArguments("start-maximized"); 
     	options.addArguments("enable-automation"); 
     	 
-    	options.addArguments("--remote-debugging-port=9222");
-    	options.addArguments("--disable-infobars");
+    	
+    	
     	
     	options.addArguments("--disable-browser-side-navigation"); 
-    	options.addArguments("--disable-gpu"); 
     
     	
     	WebDriverManager.chromedriver().setup();
