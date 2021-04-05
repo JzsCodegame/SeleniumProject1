@@ -55,7 +55,7 @@ public class SignInTestcase {
 
     public void setup()  {
 
-	 // System.setProperty("webdriver.chrome.driver", "/usr/lib/chromium-browser/chromedriver");
+	 System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 	  //ChromeOptions ChromeOptions = new ChromeOptions();
 	  //ChromeOptions.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
     	/*ChromeOptions opt = new ChromeOptions();
@@ -88,7 +88,7 @@ public class SignInTestcase {
     	
     	options.addArguments("--disable-browser-side-navigation"); 
     	options.addArguments("--user-data-dir=/home/ubuntu/.config/google-chrome/Default");
-    	WebDriverManager.chromedriver().setup();
+    	//WebDriverManager.chromedriver().setup();
     	
 	     driver = new ChromeDriver(options);
 	     
