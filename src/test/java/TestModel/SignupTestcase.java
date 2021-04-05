@@ -60,9 +60,9 @@ public class SignupTestcase {
     	opt.setExperimentalOption("useAutomationExtension", false);*/
     	//driver = new RemoteWebDriver(new URL("http://192.168.1.114:4444/wd/hub"), ChromeOptions);
     	
-    	/*ChromeOptions options = new ChromeOptions();
-        /* options.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
-    	/*options.setBinary("/usr/bin/google-chrome");
+    	ChromeOptions options = new ChromeOptions();
+        //options.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
+    	options.setBinary("/usr/bin/google-chrome");
     	options.addArguments("--headless", "window-size=1024,768");
     	options.addArguments("--no-sandbox");
     	options.addArguments("--disable-setuid-sandbox");
@@ -74,10 +74,10 @@ public class SignupTestcase {
     	options.addArguments("start-maximized"); 
     	options.addArguments("enable-automation"); 
     	options.addArguments("--disable-browser-side-navigation"); 
-    	options.addArguments("--user-data-dir=/home/ubuntu/.config/google-chrome");
-    	options.addArguments("--profile-directory=Default");
-    	options.addArguments("--user-data-dir=/usr/bin/google-chrome/Default");
-    	*/
+    	//options.addArguments("--user-data-dir=/home/ubuntu/.config/google-chrome");
+    	//options.addArguments("--profile-directory=Default");
+    	options.addArguments("--user-data-dir=/home/ubuntu/.config/google-chrome/Default");
+    	
     	WebDriverManager.chromedriver().setup();
     	
 	     driver = new ChromeDriver();
