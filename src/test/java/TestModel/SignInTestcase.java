@@ -55,7 +55,7 @@ public class SignInTestcase {
 
     public void setup()  {
 
-	 System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+	// System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 	  //ChromeOptions ChromeOptions = new ChromeOptions();
 	  //ChromeOptions.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
     	/*ChromeOptions opt = new ChromeOptions();
@@ -70,7 +70,7 @@ public class SignInTestcase {
     	capabilities.setCapability(ChromeOptions.CAPABILITY, options);*/
     	//driver = new RemoteWebDriver(new URL("http://192.168.1.114:4444/wd/hub"), ChromeOptions);
     	
-    	ChromeOptions options = new ChromeOptions();
+    	/*ChromeOptions options = new ChromeOptions();
     	options.setBinary("/usr/bin/google-chrome");
     	options.addArguments("--headless", "window-size=1024,768");
     	options.addArguments("--no-sandbox");
@@ -90,8 +90,8 @@ public class SignInTestcase {
     	options.addArguments("--profile-directory=Default");
     	options.addArguments("--user-data-dir=/usr/bin/google-chrome/Default");
     	//options.addArguments("--user-data-dir=/home/ubuntu/.config/google-chrome");
-    	
-    	//WebDriverManager.chromedriver().setup();
+    	*/
+   WebDriverManager.chromedriver().setup();
     	
 	    driver = new ChromeDriver();
 	     

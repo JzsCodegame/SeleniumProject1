@@ -50,7 +50,7 @@ public class SignupTestcase {
     	chrome_options.add_argument('--headless')
     	chrome_options.add_argument('--no-sandbox')
     	chrome_options.add_argument('--disable-dev-shm-usage')*/
-System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+//System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 	//ChromeOptions ChromeOptions = new ChromeOptions();
 	//ChromeOptions.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
     	/*ChromeOptions opt = new ChromeOptions();
@@ -60,8 +60,9 @@ System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
     	opt.setExperimentalOption("useAutomationExtension", false);*/
     	//driver = new RemoteWebDriver(new URL("http://192.168.1.114:4444/wd/hub"), ChromeOptions);
     	
-    	ChromeOptions options = new ChromeOptions();
-    	options.setBinary("/usr/bin/google-chrome");
+    	/*ChromeOptions options = new ChromeOptions();
+        /* options.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
+    	/*options.setBinary("/usr/bin/google-chrome");
     	options.addArguments("--headless", "window-size=1024,768");
     	options.addArguments("--no-sandbox");
     	options.addArguments("--disable-setuid-sandbox");
@@ -72,16 +73,12 @@ System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
     	options.addArguments("disable-infobars");
     	options.addArguments("start-maximized"); 
     	options.addArguments("enable-automation"); 
-    	
-    	
-    	
-    	
     	options.addArguments("--disable-browser-side-navigation"); 
-    	//options.addArguments("--user-data-dir=/home/ubuntu/.config/google-chrome");
+    	options.addArguments("--user-data-dir=/home/ubuntu/.config/google-chrome");
     	options.addArguments("--profile-directory=Default");
     	options.addArguments("--user-data-dir=/usr/bin/google-chrome/Default");
-    	
-    	//WebDriverManager.chromedriver().setup();
+    	*/
+    	WebDriverManager.chromedriver().setup();
     	
 	     driver = new ChromeDriver();
 		
