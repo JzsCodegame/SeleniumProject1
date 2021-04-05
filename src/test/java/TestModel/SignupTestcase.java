@@ -78,7 +78,8 @@ public class SignupTestcase {
     	
     	options.addArguments("--disable-browser-side-navigation"); 
     	//options.addArguments("--user-data-dir=/home/ubuntu/.config/google-chrome");
-    
+    	options.addArguments("--profile-directory=Default");
+    	options.addArguments("--user-data-dir=/home/ubuntu/.config/google-chrome/Default");
     	
     	//WebDriverManager.chromedriver().setup();
     	
