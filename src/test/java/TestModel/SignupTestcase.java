@@ -77,7 +77,7 @@ public class SignupTestcase {
     	
     	
     	options.addArguments("--disable-browser-side-navigation"); 
-    	options.addArguments("--user-data-dir=/home/ubuntu/.config/google-chrome");
+    	//options.addArguments("--user-data-dir=/home/ubuntu/.config/google-chrome");
     
     	
     	//WebDriverManager.chromedriver().setup();
