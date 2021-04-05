@@ -82,12 +82,12 @@ public class SignInTestcase {
     	options.addArguments("disable-infobars");
     	options.addArguments("start-maximized"); 
     	options.addArguments("enable-automation"); 
-    	 
+    	
     	
     	
     	
     	options.addArguments("--disable-browser-side-navigation"); 
-    	 
+    	options.addArguments("--user-data-dir=/home/ubuntu/.config/google-chrome/Default");
     	WebDriverManager.chromedriver().setup();
     	
 	     driver = new ChromeDriver(options);
