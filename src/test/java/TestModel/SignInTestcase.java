@@ -71,7 +71,7 @@ public class SignInTestcase {
     	//driver = new RemoteWebDriver(new URL("http://192.168.1.114:4444/wd/hub"), ChromeOptions);
     	
     	ChromeOptions options = new ChromeOptions();
-    	options.setBinary("/usr/bin/google-chrome-stable");
+    	options.setBinary("/usr/bin/google-chrome");
     	options.addArguments("--headless");
     	options.addArguments("--no-sandbox");
     	options.addArguments("--disable-setuid-sandbox");
