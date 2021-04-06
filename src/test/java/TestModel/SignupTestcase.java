@@ -46,19 +46,11 @@ public class SignupTestcase {
     @BeforeTest
 
     public void setup() throws WebDriverException {
-    	
-    	/*chrome_options = Options()
-    	chrome_options.add_argument('--headless')
-    	chrome_options.add_argument('--no-sandbox')
-    	chrome_options.add_argument('--disable-dev-shm-usage')*/
+    
 //System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-	//ChromeOptions ChromeOptions = new ChromeOptions();
-	//ChromeOptions.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
-    	/*ChromeOptions opt = new ChromeOptions();
-    	opt.setBinary("/usr/bin/google-chrome");  //chrome binary location specified here
-    	opt.addArguments("start-maximized");
-    	opt.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
-    	opt.setExperimentalOption("useAutomationExtension", false);*/
+	
+    	//opt.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
+    	//opt.setExperimentalOption("useAutomationExtension", false);
     	//driver = new RemoteWebDriver(new URL("http://192.168.1.114:4444/wd/hub"), ChromeOptions);
     	
     	ChromeOptions options = new ChromeOptions();
@@ -80,8 +72,12 @@ public class SignupTestcase {
     	//options.addArguments("--user-data-dir=/home/ubuntu/.config/google-chrome");
     	//options.addArguments("--profile-directory=Default");
     	options.addArguments("--user-data-dir=/home/ubuntu/.config/google-chrome/default");
-    	options.addArguments("--profile-directory=Default");
-    	WebDriverManager.chromedriver().setup();
+    	//options.addArguments("--profile-directory=Default");
+    	
+    	DriverManagerType chrome = DriverManagerType.CHROME;
+    	WebDriverManager.getInstance(chrome).setup();
+    	
+    	//WebDriverManager.chromedriver().setup();
     	
 	     driver = new ChromeDriver(options);
 		
