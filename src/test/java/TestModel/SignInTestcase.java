@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
 import io.github.bonigarcia.wdm.managers.ChromeDriverManager;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -53,7 +54,7 @@ public class SignInTestcase {
 
     @BeforeTest
 
-    public void setup()  {
+    public void setup() throws WebDriverException {
 
 	// System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 	  //ChromeOptions ChromeOptions = new ChromeOptions();
@@ -99,10 +100,9 @@ public class SignInTestcase {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         driver.get("http://automationpractice.com/index.php");
-
-        } 
+        
  
-   
+    }
       
         
    

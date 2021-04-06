@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
@@ -44,7 +45,7 @@ public class SignupTestcase {
 	
     @BeforeTest
 
-    public void setup() {
+    public void setup() throws WebDriverException {
     	
     	/*chrome_options = Options()
     	chrome_options.add_argument('--headless')
