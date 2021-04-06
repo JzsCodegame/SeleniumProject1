@@ -91,7 +91,7 @@ public class SignInTestcase {
     	
    WebDriverManager.chromedriver().setup();
     	
-	    driver = new ChromeDriver();
+	    driver = new ChromeDriver(options);
 	     
 		
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
