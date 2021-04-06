@@ -47,7 +47,7 @@ public class SignupTestcase {
 
     public void setup() throws WebDriverException {
     
-//System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+System.setProperty("webdriver.chrome.driver", "/usr/bin/local/chromedriver");
 	
     	//opt.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
     	//opt.setExperimentalOption("useAutomationExtension", false);
@@ -71,11 +71,11 @@ public class SignupTestcase {
 	    options.setExperimentalOption("useAutomationExtension", false);
     	//options.addArguments("--user-data-dir=/home/ubuntu/.config/google-chrome");
     	//options.addArguments("--profile-directory=Default");
-    	//options.addArguments("--user-data-dir=/home/ubuntu/.config/google-chrome/default");
+    	options.addArguments("--user-data-dir=/home/ubuntu/.config/google-chrome/default");
     	//options.addArguments("--profile-directory=default");
     	
-    	DriverManagerType chrome = DriverManagerType.CHROME;
-    	WebDriverManager.getInstance(chrome).setup();
+    	//DriverManagerType chrome = DriverManagerType.CHROME;
+    	//WebDriverManager.getInstance(chrome).setup();
     	
     	//WebDriverManager.chromedriver().setup();
     	
