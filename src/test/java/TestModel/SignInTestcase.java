@@ -88,8 +88,8 @@ public class SignInTestcase {
     	options.addArguments("--disable-browser-side-navigation"); 
 	    options.setExperimentalOption("useAutomationExtension", false);
     	//options.addArguments("--user-data-dir=/home/ubuntu/.config/google-chrome");
-    	//options.addArguments("--profile-directory=Default");
-	  options.addArguments("--user-data-dir=/home/ubuntu/.config/google-chrome.bak");
+    options.addArguments("--profile-directory=other_profile");
+	  options.addArguments("--user-data-dir=/home/ubuntu/.config/google-chrome.bak/");
     	//options.addArguments("profile-directory=Profile 2");
 	    //options.addArguments("--profile-directory=default");
 	    
