@@ -70,9 +70,9 @@ System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
     	options.addArguments("--disable-browser-side-navigation"); 
 	    options.setExperimentalOption("useAutomationExtension", false);
     	//options.addArguments("--user-data-dir=/home/ubuntu/.config/google-chrome");
-	    options.addArguments("--profile-directory=other_profile");
+	    
     	options.addArguments("--user-data-dir=/home/ubuntu/.config/google-chrome.bak/");
-    	//options.addArguments("--profile-directory=default");
+    	options.addArguments("--profile-directory=other_profile");
     	
     	//DriverManagerType chrome = DriverManagerType.CHROME;
     	//WebDriverManager.getInstance(chrome).setup();
