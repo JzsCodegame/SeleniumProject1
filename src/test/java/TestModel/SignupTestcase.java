@@ -79,7 +79,7 @@ public class SignupTestcase {
     	//options.addArguments("--user-data-dir=/home/ubuntu/.config/google-chrome");
     	//options.addArguments("--profile-directory=Default");
     	options.addArguments("--user-data-dir=/home/ubuntu/.config/google-chrome/default");
-    	
+    	options.addArguments("--profile-directory=Default");
     	WebDriverManager.chromedriver().setup();
     	
 	     driver = new ChromeDriver(options);
