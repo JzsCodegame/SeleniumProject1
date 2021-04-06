@@ -74,6 +74,7 @@ public class SignupTestcase {
     	options.addArguments("start-maximized"); 
     	options.addArguments("enable-automation"); 
     	options.addArguments("--disable-browser-side-navigation"); 
+	    options.setExperimentalOption("useAutomationExtension", false);
     	//options.addArguments("--user-data-dir=/home/ubuntu/.config/google-chrome");
     	//options.addArguments("--profile-directory=Default");
     	options.addArguments("--user-data-dir=/home/ubuntu/.config/google-chrome/Default");
