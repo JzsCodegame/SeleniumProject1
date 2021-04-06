@@ -88,7 +88,7 @@ public class SignInTestcase {
 	    options.setExperimentalOption("useAutomationExtension", false);
     	//options.addArguments("--user-data-dir=/home/ubuntu/.config/google-chrome");
     	//options.addArguments("--profile-directory=Default");
-    	options.addArguments("--user-data-dir=/home/ubuntu/.config/google-chrome/Default");
+    	options.addArguments("--user-data-dir= + chromeProfilePath");
     	
    WebDriverManager.chromedriver().setup();
     	
