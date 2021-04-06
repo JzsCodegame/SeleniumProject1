@@ -47,7 +47,7 @@ public class SignupTestcase {
 
     public void setup() throws WebDriverException {
     
-System.setProperty("webdriver.chrome.driver", "/usr/bin/local/chromedriver");
+System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
 	
     	//opt.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
     	//opt.setExperimentalOption("useAutomationExtension", false);

@@ -56,7 +56,7 @@ public class SignInTestcase {
 
     public void setup() throws WebDriverException {
 
-	System.setProperty("webdriver.chrome.driver", "/usr/bin/local/chromedriver");
+	System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
 	  //ChromeOptions ChromeOptions = new ChromeOptions();
 	  //ChromeOptions.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
     	/*ChromeOptions opt = new ChromeOptions();
