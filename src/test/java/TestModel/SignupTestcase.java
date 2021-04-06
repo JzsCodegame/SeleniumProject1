@@ -71,7 +71,7 @@ System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
 	    options.setExperimentalOption("useAutomationExtension", false);
     	//options.addArguments("--user-data-dir=/home/ubuntu/.config/google-chrome");
     	//options.addArguments("--profile-directory=Default");
-    	options.addArguments("--user-data-dir=/home/ubuntu/.config/google-chrome/default");
+    	options.addArguments("--user-data-dir=/home/ubuntu/.config/google-chrome/profile1/");
     	//options.addArguments("--profile-directory=default");
     	
     	//DriverManagerType chrome = DriverManagerType.CHROME;
