@@ -73,8 +73,9 @@ public class SignInTestcase {
     	ChromeOptions options = new ChromeOptions();
         //options.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
     	options.setBinary("/usr/bin/google-chrome");
-    	options.addArguments("--headless", "window-size=1024,768");
+    	
     	options.addArguments("--no-sandbox");
+    	options.addArguments("--headless", "window-size=1024,768");
     	options.addArguments("--disable-setuid-sandbox");
     	options.addArguments("--remote-debugging-port=9222");
     	options.addArguments("--disable-dev-shm-usage");
