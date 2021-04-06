@@ -91,8 +91,12 @@ public class SignInTestcase {
     	//options.addArguments("--profile-directory=Default");
 	    options.addArguments("--user-data-dir=/home/ubuntu/.config/google-chrome/default");
     	//options.addArguments("profile-directory=Profile 2");
-	    options.addArguments("--profile-directory=Default");
-	    WebDriverManager.chromedriver().setup();
+	    options.addArguments("--profile-directory=default");
+	    
+	    DriverManagerType chrome = DriverManagerType.CHROME;
+    	WebDriverManager.getInstance(chrome).setup();
+	    
+	    //WebDriverManager.chromedriver().setup();
     	
 	    driver = new ChromeDriver(options);
 	     
