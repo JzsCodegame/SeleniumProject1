@@ -89,9 +89,9 @@ public class SignInTestcase {
 	    options.setExperimentalOption("useAutomationExtension", false);
     	//options.addArguments("--user-data-dir=/home/ubuntu/.config/google-chrome");
     	//options.addArguments("--profile-directory=Default");
-	    options.addArguments("--user-data-dir=/home/ubuntu/.config/google-chrome/default");
+	   // options.addArguments("--user-data-dir=/home/ubuntu/.config/google-chrome/default");
     	//options.addArguments("profile-directory=Profile 2");
-	    options.addArguments("--profile-directory=default");
+	    //options.addArguments("--profile-directory=default");
 	    
 	    DriverManagerType chrome = DriverManagerType.CHROME;
     	WebDriverManager.getInstance(chrome).setup();
